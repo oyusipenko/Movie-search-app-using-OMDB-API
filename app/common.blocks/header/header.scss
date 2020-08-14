@@ -1,0 +1,29 @@
+header {
+    height: 520px;
+    width:  100wh;
+    position: relative;
+}
+
+.slider {
+    height: 100%;
+    width:  100%;
+    background-image: url('../img/header/slider/banner1.png');
+    -webkit-background-size: cover; 
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    -ms-background-size: cover;
+    background-size: cover; 
+    background-position: center center;
+    z-index: 0;
+    position: absolute;
+}
+
+.menu {      
+    height: 120px;    
+    width: 1400px;   
+    background-color: #FFF; 
+    border: 1px solid black;
+    margin: 0 auto; 
+    z-index: 1;
+    position: relative;    
+}    
