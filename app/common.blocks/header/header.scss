@@ -17,13 +17,88 @@ header {
     z-index: 0;
     position: absolute;
 }
-
+.slider__arrow-left {
+    position: absolute;
+    left: 0px;
+    top: 215px;
+}
+.slider__arrow-right {
+    position: absolute;
+    right: 0px;
+    top: 215px;
+}
+.wrapper {
+    width: 1400px;
+    height: 520px;
+    margin: 0 auto;
+}
 .menu {      
     height: 120px;    
     width: 1400px;   
     background-color: #FFF; 
-    border: 1px solid black;
     margin: 0 auto; 
     z-index: 1;
-    position: relative;    
+    position: relative;   
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__logo {
+    display: flex;
+    margin-left: 20px;
 }    
+.menu__text {
+    margin-left: 10px;
+    h1 {
+        font-size: 37.76px;
+        text-transform: uppercase;
+        font-family: 'Oswald';
+        font-weight: 700;
+        color: #727372;
+        letter-spacing: 0.22em;
+        line-height: 37.76px;
+    }
+    h2 {
+        font-size: 19.49px;
+        color: #1b7f9b;
+        font-family: 'Oswald';
+        letter-spacing: 0.29em;
+    }
+}
+.menu__nav {
+    ul {
+        list-style-type: none;
+        font-family: 'Roboto';
+        font-size: 15px;
+        li {
+            display: inline;
+            text-transform: uppercase;
+            margin: 0 30px;
+            a {
+                text-decoration: none;
+                color: green;
+            }
+            a:hover {
+                color: #4999af;
+            }
+        }
+    }
+}
+.description {
+    width: 460px;
+    height: 160px;
+    margin-top: 205px;
+    background-color: #00809e;
+    position: relative;
+    z-index: 1;
+    padding: 20px 20px;
+    opacity: 0.8;
+    h2 {
+        font-size: 34px;
+        font-family: "Oswald";
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        line-height: 1.2;
+    }
+}
