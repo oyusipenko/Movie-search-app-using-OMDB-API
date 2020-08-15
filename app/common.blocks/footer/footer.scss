@@ -1,0 +1,90 @@
+.footer {
+    height: 216px;
+    width: 100wh;
+    background-color: #525252;
+}
+.footer__content {
+    height: 160px;
+    border-bottom: 1px solid #6b6b6a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 29px;
+
+}
+.footer__subscribe {
+    // background-color: red;
+    height: 100px;
+    width: 333px;
+    h3 {
+        font-size: 20px;
+        font-family: "ProximaNova";
+        color: rgb(243, 238, 234);
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+    button {
+        font-size: 18px;
+        font-family: "Myriad Pro";
+        color: rgb(243, 238, 234);
+        text-transform: uppercase;
+        line-height: 1.2;
+        background-color: #4999af;
+        width: 274px;
+        height: 37px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 22px;
+    }
+}
+.footer__service {
+    height: 100px;
+    width: 333px;
+    h3 {
+        font-size: 20px;
+        font-family: "ProximaNova";
+        color: rgb(243, 238, 234);
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+    h4 {
+        font-size: 20px;
+        font-family: "ProximaNova";
+        color: rgb(243, 238, 234);
+        line-height: 1.2;
+        margin-top: 27px;
+    }
+    sub {
+        font-size: 12px;
+        font-family: "ProximaNova";
+        color: rgb(179, 179, 179);
+        line-height: 1.2;
+    }
+}
+.footer__connect {
+    height: 100px;
+    width: 333px;
+    margin-left: 92px;
+    h3 {
+        font-size: 20px;
+        font-family: "ProximaNova";
+        color: rgb(243, 238, 234);
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+}
+.footer__social {
+    margin-top: 31px;
+    a {
+        margin-right: 4px;
+    }
+}
+.footer__copyright {
+    h5 {
+        font-size: 12px;
+        font-family: "Myriad Pro";
+        color: rgb(179, 179, 179);
+        line-height: 1.2;
+        margin-top: 16px;
+    }
+}
