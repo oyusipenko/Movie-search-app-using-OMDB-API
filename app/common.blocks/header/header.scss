@@ -1,4 +1,4 @@
-header {
+.header {
     height: 520px;
     width:  100wh;
     position: relative;
@@ -24,17 +24,17 @@ header {
 }
 .slider__arrow-right {
     position: absolute;
-    right: 0px;
+    right: 0px; 
     top: 215px;
 }
 .wrapper {
-    width: 1400px;
-    height: 520px;
+    width: 1000px;
+    height: 100%;
     margin: 0 auto;
 }
 .menu {      
     height: 120px;    
-    width: 1400px;   
+    width: 1000px;   
     background-color: #FFF; 
     margin: 0 auto; 
     z-index: 1;
@@ -64,6 +64,7 @@ header {
         color: #1b7f9b;
         font-family: 'Oswald';
         letter-spacing: 0.29em;
+        line-height: 19.49px;
     }
 }
 .menu__nav {
@@ -74,7 +75,7 @@ header {
         li {
             display: inline;
             text-transform: uppercase;
-            margin: 0 30px;
+            margin: 0 29px;
             a {
                 text-decoration: none;
                 color: green;
