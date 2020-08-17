@@ -1,5 +1,9 @@
 'use strict'
+
 window.onload = function () {
+    // 
+    //  HEADER SLIDER
+    //
     const photos = [
         {src: "url('img/header/slider/banner1.png')"},
         {src: "url('img/header/slider/banner2.png')"},
@@ -19,6 +23,9 @@ window.onload = function () {
         counter = (counter + photos.length) % photos.length;
         slider.style.backgroundImage = photos[counter].src;
     })
+    // 
+    //  MAIN REQUEST
+    //
     let movies = [];
     let importedData;
     function getMovies (page) {
@@ -54,15 +61,17 @@ window.onload = function () {
                 }
             })
             .catch(function (error) {
-                let content = document.querySelector('.content');
-                content.innerHTML='Фильма с данным названием не существует в базе.'
+                console.log(error)
+                document.querySelector('.content').innerHTML='Фильма с данным названием не существует в базе.'
                 document.querySelector("#fromResult").innerHTML = '0';
                 document.querySelector("#toResult").innerHTML = '0';
                 document.querySelector("#totalResults").innerHTML = '0';
                 document.querySelector("#itemPerPage").innerHTML = '0';
             });
     }
-        
+    // 
+    //  HEADER PAGINATION
+    //
     let search = document.querySelector("#search");
     let searchButton = document.querySelector("#searchButton");
     let pageNumber = 1;
@@ -72,6 +81,7 @@ window.onload = function () {
     let toResult;
 
     searchButton.addEventListener('click', function () {
+        pageNumber = 1;
         document.querySelector("#fromResult").innerHTML = '1';
         document.querySelector("#toResult").innerHTML = '10';
         getMovies(pageNumber);
