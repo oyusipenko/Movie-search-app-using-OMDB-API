@@ -1,6 +1,31 @@
-@mixin main-min1000px {
+@mixin main-max1000px {
     .search__input {
         width: 70%;
-
     }
+}
+@mixin main-max655px {
+    .search {
+        padding-top: 40px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    .search__title {
+        display: none;
+    }
+    .search__title-min {
+        display:block;
+        // width: 170px;
+        h3 {
+            font-size: 28px;
+            font-family: "Oswald";
+            color: #4999af;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+    }
+    .search__input {
+        width: 100%;
+    }
+
 }

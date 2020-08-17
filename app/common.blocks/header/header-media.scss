@@ -8,12 +8,7 @@
     }
 }
 @mixin header-max790px {
-    .menu {
-        flex-direction: column;
-    }
-    .menu__logo {
-        margin-left: 0px;
-    }
+
     .menu__nav {
         width: 100%;
         ul {
@@ -24,12 +19,14 @@
                 margin: 0 0;
             }
         }
-
     }
 }
 @mixin header-max655px {
+    .menu__logo {
+        margin-left: 0px;
+    }
     .menu {
-        
+        flex-direction: column;
         justify-content: space-around;
 
     }

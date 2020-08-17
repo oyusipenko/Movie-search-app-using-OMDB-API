@@ -10,6 +10,9 @@
     align-items: center;
     height: 148px;
 }
+.search__title-min {
+    display: none;
+}
 .search__title {
     width: 170px;
     h3 {
@@ -56,11 +59,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .content__element {
     background-color:lightblue;
-    width: 320px;
+    min-width: 320px;
     height: 200px;
     margin-bottom: 20px;
 }

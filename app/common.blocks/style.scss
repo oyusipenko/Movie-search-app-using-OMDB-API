@@ -14,7 +14,7 @@
 
 @media screen and (max-width: 1000px) {
     @include header-max1000px;
-    @include main-min1000px;
+    @include main-max1000px;
     @include footer-max1000px;
 
 }
@@ -24,5 +24,6 @@
 }
 @media screen and (max-width: 655px) {
     @include header-max655px;
+    @include main-max655px;
     @include footer-max655px;  
 }
