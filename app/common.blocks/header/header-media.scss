@@ -1,0 +1,23 @@
+@mixin header-max1000px {
+    .wrapper {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .menu {
+        width: 100%;
+    }
+}
+@mixin header-max790px {
+    .menu__nav ul li {
+        margin: 0 15px;
+    }
+}
+@mixin header-max655px {
+    .menu {      
+        justify-content: space-around;
+    }
+    .menu__nav ul li {
+        margin: 0 3px;
+    }
+    
+}
