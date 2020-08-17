@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/scripts.js"></script>
     <title>Document</title>
-</head>
+</head> 
 <body>
     <header class="header">
         <div class="slider">
-            <img class="slider__arrow-left" src="img/header/slider/slider_left.png">
-            <img class="slider__arrow-right" src="img/header/slider/slider_right.png">
+            <img class="slider__arrow-left" id="sliderArrowLeft" src="img/header/slider/slider_left.png" alt="">
+            <img class="slider__arrow-right" id="sliderArrowRight" src="img/header/slider/slider_right.png" alt="">
         </div>
         <div class="wrapper">
             <div class="menu">
                 <div class="menu__logo">
                     <a href="#">
-                        <img src="img/header/Logo.png">
+                        <img src="img/header/Logo.png" alt="Movie collection">
                     </a>
                     <div class="menu__text">
                         <h1>Movie</h1>   
@@ -25,7 +26,7 @@
                 </div> 
                 <div class="menu__nav">
                     <ul>
-                        <li><a href="#">About</a></a></li>
+                        <li><a href="#">About</a></li>
                         <li><a href="#">Media</a></li>
                         <li><a href="#">Events</a></li>
                         <li><a href="#">Shop</a></li>
@@ -45,18 +46,18 @@
                     <h3>Explore Movies <br> & Series</h3>
                 </div>
                 <div class="search__input">
-                    <input type="text" placeholder="Search...">
-                    <button><img src="./img/main/search_icon.png"></button>
+                    <input type="text" placeholder="Search..." id="search">
+                    <button id="searchButton"><img src="./img/main/search_icon.png" alt="search"></button>
                 </div>
             </div>
             <div class="content">
                 <div class="content__element">
                     <div class="content__description-1">
-                        <h3>Movie Title</h3>
+                        <h3 id="title">Movie Title</h3>
                     </div>
                     <div class="content__description-2">
-                        <h4>Type of movie</h4>
-                        <h4>Year</h4>
+                        <h4 id="type">Type of movie</h4>
+                        <h4 id="year">Year</h4>
                     </div>
                 </div>
                 <div class="content__element">
@@ -134,7 +135,7 @@
             </div>
             <div class="pagination">
                 <div class="pagination__elem1">
-                    <h5>Items per page: <span id="">10</span></h5>
+                    <h5>Items per page: <span id="itemPerPage">10</span></h5>
                 </div>
                 <div class="pagination__elem2">
                     <h5>11-20 of 377</h5>
@@ -176,19 +177,19 @@
                     </h3>
                     <div class="footer__social">
                         <a href="#">
-                            <img src="img/footer/facebook.png">
+                            <img src="img/footer/facebook.png" alt="Facebook">
                         </a>
                         <a href="#">
-                            <img src="img/footer/twitter.png">
+                            <img src="img/footer/twitter.png" alt="twitter">
                         </a>
                         <a href="#">
-                            <img src="img/footer/youtube.png">
+                            <img src="img/footer/youtube.png" alt="YouTube">
                         </a>
                         <a href="#">
-                            <img src="img/footer/paypal.png">
+                            <img src="img/footer/paypal.png" alt="PayPal">
                         </a>
                         <a href="#">
-                            <img src="img/footer/email.png">
+                            <img src="img/footer/email.png" alt="E-mail">
                         </a>
                     </div>
                 </div>

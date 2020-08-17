@@ -3,7 +3,6 @@
     width:  100wh;
     position: relative;
 }
-
 .slider {
     height: 100%;
     width:  100%;
@@ -16,16 +15,23 @@
     background-position: center center;
     z-index: 0;
     position: absolute;
+    transition: 0.1s;
 }
 .slider__arrow-left {
     position: absolute;
     left: 0px;
     top: 215px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .slider__arrow-right {
     position: absolute;
     right: 0px; 
     top: 215px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .wrapper {
     width: 1000px;
