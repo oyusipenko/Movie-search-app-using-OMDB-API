@@ -8,14 +8,14 @@ const sourcemaps = require('gulp-sourcemaps');
 gulp.task('brSync', () => {
     brSync.init({
         server: {          
-            baseDir: "./public"
+            baseDir: "./docs"
         },
     });
 });
 
 gulp.task('html', () => {   
     return gulp.src('app/common.blocks/index.html', { since: gulp.lastRun('html') })
-        .pipe(gulp.dest('public'))
+        .pipe(gulp.dest('docs'))
         .pipe(brSync.reload({ stream: true }))
 });
 
@@ -27,7 +27,7 @@ gulp.task('sass', () => {
         })
             .on('error', sass.logError))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('public/css'))
+        .pipe(gulp.dest('docs/css'))
         .pipe(brSync.reload({ stream: true }))
 });
 
