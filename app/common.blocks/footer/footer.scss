@@ -1,14 +1,14 @@
 .footer {
-    height: 216px;
+    height: auto;
     background-color: #525252;
 }
 .footer__content {
-    height: 160px;
+    height: auto;
     border-bottom: 1px solid #6b6b6a;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 29px;
+    padding: 29px 0 31px 0;
 
 }
 .footer__subscribe {
@@ -80,10 +80,11 @@
 }
 .footer__copyright {
     h5 {
+        display: block;
         font-size: 12px;
         font-family: "Myriad Pro";
         color: rgb(179, 179, 179);
         line-height: 1.2;
-        margin-top: 16px;
+        padding: 16px 0;
     }
 }
