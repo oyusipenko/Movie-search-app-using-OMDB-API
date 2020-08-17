@@ -1,0 +1,29 @@
+@mixin footer-max1000px {
+    .footer__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .footer__subscribe {
+        width: auto;
+    }
+    .footer__service {
+        width: auto;
+        margin: 0 10px 15px 10px;
+    }
+    .footer__connect {
+        width: auto;
+        margin-left: 0;
+    }
+}
+@mixin footer-max790px {
+    .footer {
+        text-align: center;
+    }
+}
+@mixin footer-max655px {
+    .pagination div {
+        margin-left: 0;
+    }
+}
