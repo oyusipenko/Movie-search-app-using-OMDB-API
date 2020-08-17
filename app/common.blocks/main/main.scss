@@ -11,6 +11,7 @@
     height: 148px;
 }
 .search__title {
+    width: 170px;
     h3 {
         font-size: 28px;
         font-family: "Oswald";
@@ -22,13 +23,14 @@
 .search__input {
     border: 1px solid #4999af;
     height: 43px;
+    width: 700px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: #f3eeea;
     input {
-        width: 700px;
+        width: 100%;
         height: 40px;
         background-color: #f3eeea;
         border: 0px;
@@ -110,8 +112,11 @@
     }
 }
 .pagination__elem3 {
+    span {
+        cursor: pointer;
+    }
     span:nth-child(2) {
         margin-left: 5px;
     }
 }
-  
+@import "main-media(min1000px).scss";

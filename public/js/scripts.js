@@ -19,26 +19,24 @@ window.onload = function () {
         counter = (counter + photos.length) % photos.length;
         slider.style.backgroundImage = photos[counter].src;
     })
-        
     let movies = [];
-    function getMovies () {
+    let importedData;
+    function getMovies (page) {
         movies = [];
-        fetch("http://www.omdbapi.com/?apikey=8b47da7b&s="+search.value+"&page=1")
+        fetch("http://www.omdbapi.com/?apikey=8b47da7b&s="+search.value+"&page="+page+"")
             .then(response => response.json())
             .then(function(data){
                 let num = data.Search.length;
                 for (let i = 0; i < num; i++) {
                     movies.push(data.Search[i]);
                 }
-                // console.log(data)
-                console.log(movies);
+                importedData = data;
                 return movies;
             })
             .then(function(movies) {
                 let content = document.querySelector('.content');
                 content.innerHTML=''
                 for (let i = 0; i < movies.length; i++) {
-                    console.log(i)
                     let content__element = document.createElement('div')
                     content__element.className = 'content__element'
                     content__element.style.background = 'url('+movies[i].Poster+')'
@@ -51,22 +49,61 @@ window.onload = function () {
                     content__element.append(content__description1)
                     content__element.append(content__description2)
                     content.append(content__element)
-
-
+                    document.querySelector("#totalResults").innerHTML = importedData.totalResults;
+                    document.querySelector("#itemPerPage").innerHTML = movies.length;
                 }
-
             })
-
+            .catch(function (error) {
+                let content = document.querySelector('.content');
+                content.innerHTML='Фильма с данным названием не существует в базе.'
+                document.querySelector("#fromResult").innerHTML = '0';
+                document.querySelector("#toResult").innerHTML = '0';
+                document.querySelector("#totalResults").innerHTML = '0';
+                document.querySelector("#itemPerPage").innerHTML = '0';
+            });
     }
-
-
-    
+        
     let search = document.querySelector("#search");
     let searchButton = document.querySelector("#searchButton");
-    
+    let pageNumber = 1;
+    let fromResultSpan = document.querySelector("#fromResult");
+    let toResultSpan = document.querySelector("#toResult");
+    let fromResult;
+    let toResult;
 
     searchButton.addEventListener('click', function () {
-        console.log(search.value)
-        getMovies();
+        document.querySelector("#fromResult").innerHTML = '1';
+        document.querySelector("#toResult").innerHTML = '10';
+        getMovies(pageNumber);
+    })
+    document.querySelector("#prevPage").addEventListener('click', function () {
+        if (pageNumber == 1) {
+            pageNumber = 1;
+        } else {
+            pageNumber -= 1;
+        }
+        fromResult = pageNumber * 10-9;
+        toResult = pageNumber * 10;
+        if (toResult > importedData.totalResults) {
+            toResult = importedData.totalResults
+        } 
+        fromResultSpan.innerHTML = fromResult;
+        toResultSpan.innerHTML = toResult;
+        getMovies(pageNumber);
+    })
+    document.querySelector("#nextPage").addEventListener('click', function () {
+        if (Math.ceil(importedData.totalResults/10) == pageNumber) {
+            console.log("ничего не делать")
+        } else {
+            pageNumber += 1;
+        }
+        fromResult = pageNumber * 10-9;
+        toResult = pageNumber * 10;
+        if (toResult > importedData.totalResults) {
+            toResult = importedData.totalResults
+        } 
+        fromResultSpan.innerHTML = fromResult;
+        toResultSpan.innerHTML = toResult;
+        getMovies(pageNumber);
     })
 };

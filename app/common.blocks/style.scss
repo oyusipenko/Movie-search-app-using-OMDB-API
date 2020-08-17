@@ -6,5 +6,12 @@
 
 @import "fonts.scss";
 @import "./header/header.scss";
+@import "./header/header-media(min1000px).scss";
 @import "./main/main.scss";
+@import "./main/main-media(min1000px).scss";
 @import "./footer/footer.scss";
+
+@media screen and (max-width: 1000px) {
+    @include header-min1000px;
+    @include main-min1000px;
+}
