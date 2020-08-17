@@ -30,7 +30,7 @@ window.onload = function () {
     let importedData;
     function getMovies (page) {
         movies = [];
-        fetch("http://www.omdbapi.com/?apikey=8b47da7b&s="+search.value+"&page="+page+"")
+        fetch("https://www.omdbapi.com/?apikey=8b47da7b&s="+search.value+"&page="+page+"")
             .then(response => response.json())
             .then(function(data){
                 let num = data.Search.length;
