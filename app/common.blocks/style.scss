@@ -10,14 +10,19 @@
 @import "./main/main.scss";
 @import "./main/main-media(min1000px).scss";
 @import "./footer/footer.scss";
+@import "./footer/footer-media.scss";
 
 @media screen and (max-width: 1000px) {
     @include header-max1000px;
     @include main-min1000px;
+    @include footer-max1000px;
+
 }
 @media screen and (max-width: 790px) {
     @include header-max790px;
+    @include footer-max790px; 
 }
 @media screen and (max-width: 655px) {
     @include header-max655px;
+    @include footer-max655px;  
 }
