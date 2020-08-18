@@ -28,29 +28,9 @@
     .menu {
         flex-direction: column;
         justify-content: space-around;
-
     }
     .description {
-        display: none;
-    }
-    .description-min {
-        display: block;
         width: 90%;
-        height: 160px;
         margin: 205px auto 0 auto;
-        background-color: #00809e;
-        position: relative;
-        z-index: 1;
-        padding: 20px 20px;
-        opacity: 0.8;
-        h2 {
-            font-size: 34px;
-            font-family: "Oswald";
-            color: rgb(255, 255, 255);
-            font-weight: 400;
-            line-height: 1.2;
-        }
     }
-
-    
 }

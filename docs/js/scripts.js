@@ -44,15 +44,15 @@ window.onload = function () {
                 let content = document.querySelector('.content');
                 content.innerHTML=''
                 for (let i = 0; i < movies.length; i++) {
-                    let content__element = document.createElement('div')
+                    let content__element = document.createElement('section')
                     content__element.className = 'content__element'
                     content__element.style.background = 'url('+movies[i].Poster+')'
-                    let content__description1 = document.createElement('div')
+                    let content__description1 = document.createElement('title')
                     content__description1.className = 'content__description-1'
-                    content__description1.innerHTML = "<h3>"+movies[i].Title+"</h3>"
+                    content__description1.innerHTML = movies[i].Title;
                     let content__description2 = document.createElement('div')
                     content__description2.className = 'content__description-2'
-                    content__description2.innerHTML = "<h4>"+movies[i].Type+"</h4><h4>"+movies[i].Year+"</h4>"
+                    content__description2.innerHTML = "<h4>"+movies[i].Type+"</h4><time>"+movies[i].Year+"</time>"
                     content__element.append(content__description1)
                     content__element.append(content__description2)
                     content.append(content__element)
@@ -103,7 +103,7 @@ window.onload = function () {
     })
     document.querySelector("#nextPage").addEventListener('click', function () {
         if (Math.ceil(importedData.totalResults/10) == pageNumber) {
-            console.log("ничего не делать")
+            
         } else {
             pageNumber += 1;
         }
@@ -116,4 +116,23 @@ window.onload = function () {
         toResultSpan.innerHTML = toResult;
         getMovies(pageNumber);
     })
+};
+
+
+
+
+
+if (matchMedia) {
+    let screen = window.matchMedia("(max-width:650px)");
+    screen.addListener(changes);
+    changes(screen);
+};
+function changes(event){
+    if (event.matches) {
+        document.querySelector(".description").innerHTML= "<h2><b>Welcome to MovieCollection website</b></h2>";
+        document.querySelector(".search__title").innerHTML= "<h3>Explore Movies & Series</h3>";
+    } else {
+        document.querySelector(".description").innerHTML= "<h2><b>Welcome to MovieCollection website</b> which is run by the friends of MovieCollection</h2>";
+        document.querySelector(".search__title").innerHTML= "<h3>Explore Movies <br> & Series</h3>";
+    }
 };

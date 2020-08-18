@@ -11,17 +11,7 @@
         flex-direction: column;
     }
     .search__title {
-        display: none;
-    }
-    .search__title-min {
-        display:block;
-        h3 {
-            font-size: 28px;
-            font-family: "Oswald";
-            color: #4999af;
-            font-weight: bold;
-            line-height: 1.2;
-        }
+        width: auto;
     }
     .search__input {
         width: 100%;

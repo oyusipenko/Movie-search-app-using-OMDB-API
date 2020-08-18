@@ -76,8 +76,14 @@
     text-transform: uppercase;
     line-height: 1.2;
     text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
-    padding-top: 100px;
-    padding-left: 120px;
+    // padding-top: 100px;
+    // padding-left: 120px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
 }
 .content__description-2 {
     height: 47px;
@@ -95,7 +101,7 @@
     h4:nth-child(1) {
         margin-left: 18px;
     }
-    h4:nth-child(2) {
+    time {
         margin-right: 15px;
     }
 }
