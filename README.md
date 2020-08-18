@@ -1,3 +1,5 @@
-# markup-test2
+# Movie search app using OMDB API
 
-https://oyusipenko.github.io/markup-test2/
+Active link: https://oyusipenko.github.io/movie-search-using-OMDB-API/
+
+This is a project that uses JavaScript to receiving the information from OMDb using API.
