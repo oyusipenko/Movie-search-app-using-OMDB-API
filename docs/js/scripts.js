@@ -92,7 +92,7 @@ window.onload = function () {
             });
     }
     // 
-    //  HEADER PAGINATION
+    //  PAGINATION
     //
     let search = document.querySelector("#search");
     let searchButton = document.querySelector("#searchButton");
