@@ -46,7 +46,11 @@ window.onload = function () {
                 for (let i = 0; i < movies.length; i++) {
                     let content__element = document.createElement('section')
                     content__element.className = 'content__element'
-                    content__element.style.background = 'url('+movies[i].Poster+')'
+                    if (movies[i].Poster == 'N/A') {
+                        content__element.style.background = "url('./img/main/pic2.png')";
+                    } else {
+                        content__element.style.background = 'url('+movies[i].Poster+')'
+                    };
                     let content__description1 = document.createElement('title')
                     content__description1.className = 'content__description-1'
                     content__description1.innerHTML = movies[i].Title;
@@ -103,7 +107,7 @@ window.onload = function () {
     })
     document.querySelector("#nextPage").addEventListener('click', function () {
         if (Math.ceil(importedData.totalResults/10) == pageNumber) {
-            
+
         } else {
             pageNumber += 1;
         }
