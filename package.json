@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oyusipenko/markup-test2.git"
+    "url": "git+https://github.com/oyusipenko/movie-search-using-OMDB-API.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oyusipenko/markup-test2/issues"
+    "url": "https://github.com/oyusipenko/movie-search-using-OMDB-API/issues"
   },
-  "homepage": "https://github.com/oyusipenko/markup-test2#readme",
+  "homepage": "https://github.com/oyusipenko/movie-search-using-OMDB-API#readme",
   "devDependencies": {
     "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
