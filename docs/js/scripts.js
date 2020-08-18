@@ -40,11 +40,11 @@ window.onload = function () {
     screen.addListener(changes);
     changes(screen);
   }
-
   //
   //  MAIN REQUEST
   //
   let search = document.querySelector('#search');
+  let searchButton = document.querySelector('#searchButton');
   let movies = [];
   let importedData;
   function getMovies(page) {
@@ -95,7 +95,6 @@ window.onload = function () {
   //  PAGINATION
   //
 
-  let searchButton = document.querySelector('#searchButton');
   let pageNumber = 1;
   let fromResultSpan = document.querySelector('#fromResult');
   let toResultSpan = document.querySelector('#toResult');
