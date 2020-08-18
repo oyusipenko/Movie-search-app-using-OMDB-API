@@ -1,12 +1,12 @@
 # Movie search app using OMDB API
 
-Active link: https://oyusipenko.github.io/movie-search-using-OMDB-API/
+Active link: https://oyusipenko.github.io/Movie-search-app-using-OMDb-API
 
 This is a project that uses JavaScript to receiving the information from OMDb using API.
 
 # Installing
 Navigate to the local directory where the repo was installed
 
-Run npm install
+Run <code>npm install</code>
 
-Run npm start
+Run <code>npm start</code>
