@@ -84,10 +84,6 @@ window.onload = function () {
                 }
             })
             .catch(function (error) {
-                if (error.Error === "Movie not found!") {
-                    console.log(error)
-                }
-                
                 document.querySelector('.content').innerHTML='Фильм с данным названием не существует в базе.'
                 document.querySelector("#fromResult").innerHTML = '0';
                 document.querySelector("#toResult").innerHTML = '0';
