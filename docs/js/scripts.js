@@ -24,6 +24,25 @@ window.onload = function () {
         slider.style.backgroundImage = photos[counter].src;
     })
     // 
+    //  matchMedia 
+    //
+    if (matchMedia) {
+        let screen = window.matchMedia("(max-width:650px)");
+        screen.addListener(changes);
+        changes(screen);
+    };
+    function changes(event){
+        let description = document.querySelector(".description");
+        let searchTitle = document.querySelector(".search__title");
+        if (event.matches) {
+            description.innerHTML = "<h2><b>Welcome to MovieCollection website</b></h2>";
+            searchTitle.innerHTML = "<h3>Explore Movies & Series</h3>";
+        } else {
+            description.innerHTML = "<h2><b>Welcome to MovieCollection website</b> which is run by the friends of MovieCollection</h2>";
+            searchTitle.innerHTML = "<h3>Explore Movies <br> & Series</h3>";
+        }
+    };
+    // 
     //  MAIN REQUEST
     //
     let movies = [];
@@ -44,14 +63,14 @@ window.onload = function () {
                 let content = document.querySelector('.content');
                 content.innerHTML=''
                 for (let i = 0; i < movies.length; i++) {
-                    let content__element = document.createElement('section')
+                    let content__element = document.createElement('li')
                     content__element.className = 'content__element'
                     if (movies[i].Poster == 'N/A') {
                         content__element.style.background = "url('./img/main/pic2.png')";
                     } else {
                         content__element.style.background = 'url('+movies[i].Poster+')'
                     };
-                    let content__description1 = document.createElement('title')
+                    let content__description1 = document.createElement('div')
                     content__description1.className = 'content__description-1'
                     content__description1.innerHTML = movies[i].Title;
                     let content__description2 = document.createElement('div')
@@ -65,7 +84,10 @@ window.onload = function () {
                 }
             })
             .catch(function (error) {
-                console.log(error)
+                if (error.Error === "Movie not found!") {
+                    console.log(error)
+                }
+                
                 document.querySelector('.content').innerHTML='Фильма с данным названием не существует в базе.'
                 document.querySelector("#fromResult").innerHTML = '0';
                 document.querySelector("#toResult").innerHTML = '0';
@@ -120,23 +142,4 @@ window.onload = function () {
         toResultSpan.innerHTML = toResult;
         getMovies(pageNumber);
     })
-};
-
-
-
-
-
-if (matchMedia) {
-    let screen = window.matchMedia("(max-width:650px)");
-    screen.addListener(changes);
-    changes(screen);
-};
-function changes(event){
-    if (event.matches) {
-        document.querySelector(".description").innerHTML= "<h2><b>Welcome to MovieCollection website</b></h2>";
-        document.querySelector(".search__title").innerHTML= "<h3>Explore Movies & Series</h3>";
-    } else {
-        document.querySelector(".description").innerHTML= "<h2><b>Welcome to MovieCollection website</b> which is run by the friends of MovieCollection</h2>";
-        document.querySelector(".search__title").innerHTML= "<h3>Explore Movies <br> & Series</h3>";
-    }
 };
