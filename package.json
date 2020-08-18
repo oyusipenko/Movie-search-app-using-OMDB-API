@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oyusipenko/movie-search-using-OMDB-API.git"
+    "url": "git+https://github.com/oyusipenko/Movie-search-app-using-OMDb-API.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oyusipenko/movie-search-using-OMDB-API/issues"
+    "url": "https://github.com/oyusipenko/Movie-search-app-using-OMDb-API.git/issues"
   },
-  "homepage": "https://github.com/oyusipenko/movie-search-using-OMDB-API#readme",
+  "homepage": "https://github.com/oyusipenko/Movie-search-app-using-OMDb-API.git#readme",
   "devDependencies": {
     "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
