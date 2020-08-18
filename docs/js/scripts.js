@@ -75,7 +75,7 @@ window.onload = function () {
                     content__description1.innerHTML = movies[i].Title;
                     let content__description2 = document.createElement('div')
                     content__description2.className = 'content__description-2'
-                    content__description2.innerHTML = "<h4>"+movies[i].Type+"</h4><time>"+movies[i].Year+"</time>"
+                    content__description2.innerHTML = "<h4>"+movies[i].Type+"</h4><h4>"+movies[i].Year+"</h4>"
                     content__element.append(content__description1)
                     content__element.append(content__description2)
                     content.append(content__element)
