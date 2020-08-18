@@ -88,7 +88,7 @@ window.onload = function () {
                     console.log(error)
                 }
                 
-                document.querySelector('.content').innerHTML='Фильма с данным названием не существует в базе.'
+                document.querySelector('.content').innerHTML='Фильм с данным названием не существует в базе.'
                 document.querySelector("#fromResult").innerHTML = '0';
                 document.querySelector("#toResult").innerHTML = '0';
                 document.querySelector("#totalResults").innerHTML = '0';
