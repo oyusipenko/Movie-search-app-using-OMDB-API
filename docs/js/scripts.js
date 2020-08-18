@@ -24,11 +24,6 @@ window.onload = function () {
   //
   //  matchMedia
   //
-  if (matchMedia) {
-    let screen = window.matchMedia('(max-width:650px)');
-    screen.addListener(changes);
-    changes(screen);
-  }
   function changes(event) {
     let description = document.querySelector('.description');
     let searchTitle = document.querySelector('.search__title');
@@ -40,9 +35,16 @@ window.onload = function () {
       searchTitle.innerHTML = '<h3>Explore Movies <br> & Series</h3>';
     }
   }
+  if (matchMedia) {
+    let screen = window.matchMedia('(max-width:650px)');
+    screen.addListener(changes);
+    changes(screen);
+  }
+
   //
   //  MAIN REQUEST
   //
+  let search = document.querySelector('#search');
   let movies = [];
   let importedData;
   function getMovies(page) {
@@ -57,32 +59,32 @@ window.onload = function () {
         importedData = data;
         return movies;
       })
-      .then(function (movies) {
+      .then(function () {
         let content = document.querySelector('.content');
         content.innerHTML = '';
         for (let i = 0; i < movies.length; i++) {
-          let content__element = document.createElement('li');
-          content__element.className = 'content__element';
-          if (movies[i].Poster == 'N/A') {
-            content__element.style.background = "url('./img/main/pic2.png')";
+          let contentElement = document.createElement('li');
+          contentElement.className = 'content__element';
+          if (movies[i].Poster === 'N/A') {
+            contentElement.style.background = "url('./img/main/pic2.png')";
           } else {
-            content__element.style.background = 'url(' + movies[i].Poster + ')';
+            contentElement.style.background = 'url(' + movies[i].Poster + ')';
           }
-          let content__description1 = document.createElement('div');
-          content__description1.className = 'content__description-1';
-          content__description1.innerHTML = movies[i].Title;
-          let content__description2 = document.createElement('div');
-          content__description2.className = 'content__description-2';
-          content__description2.innerHTML = '<h4>' + movies[i].Type + '</h4><h4>' + movies[i].Year + '</h4>';
-          content__element.append(content__description1);
-          content__element.append(content__description2);
-          content.append(content__element);
+          let contentDescription1 = document.createElement('div');
+          contentDescription1.className = 'content__description-1';
+          contentDescription1.innerHTML = movies[i].Title;
+          let contentDescription2 = document.createElement('div');
+          contentDescription2.className = 'content__description-2';
+          contentDescription2.innerHTML = '<h4>' + movies[i].Type + '</h4><h4>' + movies[i].Year + '</h4>';
+          contentElement.append(contentDescription1);
+          contentElement.append(contentDescription2);
+          content.append(contentElement);
           document.querySelector('#totalResults').innerHTML = importedData.totalResults;
           document.querySelector('#itemPerPage').innerHTML = movies.length;
         }
       })
-      .catch(function (error) {
-        document.querySelector('.content').innerHTML = 'Фильм с данным названием не существует в базе.';
+      .catch(function () {
+        document.querySelector('.content').innerHTML = 'Фильм с данным названием ' + search.value + ' не существует в базе.';
         document.querySelector('#fromResult').innerHTML = '0';
         document.querySelector('#toResult').innerHTML = '0';
         document.querySelector('#totalResults').innerHTML = '0';
@@ -92,7 +94,7 @@ window.onload = function () {
   //
   //  PAGINATION
   //
-  let search = document.querySelector('#search');
+
   let searchButton = document.querySelector('#searchButton');
   let pageNumber = 1;
   let fromResultSpan = document.querySelector('#fromResult');
@@ -107,7 +109,7 @@ window.onload = function () {
     getMovies(pageNumber);
   });
   document.querySelector('#prevPage').addEventListener('click', function () {
-    if (pageNumber == 1) {
+    if (pageNumber === 1) {
       pageNumber = 1;
     } else {
       pageNumber -= 1;
