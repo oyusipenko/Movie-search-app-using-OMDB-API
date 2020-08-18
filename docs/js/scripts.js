@@ -1,5 +1,4 @@
 'use strict'
-
 window.onload = function () {
     // 
     //  HEADER SLIDER
@@ -124,9 +123,7 @@ window.onload = function () {
         getMovies(pageNumber);
     })
     document.querySelector("#nextPage").addEventListener('click', function () {
-        if (Math.ceil(importedData.totalResults/10) == pageNumber) {
-
-        } else {
+        if (Math.ceil(importedData.totalResults/10) !== pageNumber) {
             pageNumber += 1;
         }
         fromResult = pageNumber * 10-9;
