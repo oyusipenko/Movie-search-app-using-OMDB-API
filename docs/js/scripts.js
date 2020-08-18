@@ -53,7 +53,7 @@ window.onload = function () {
       .then(response => response.json())
       .then(function (data) {
         let num = data.Search.length;
-        for (let i = 0; i < num; i++) {
+        for (let i = 0; i < num; i += 1) {
           movies.push(data.Search[i]);
         }
         importedData = data;
@@ -62,7 +62,7 @@ window.onload = function () {
       .then(function () {
         let content = document.querySelector('.content');
         content.innerHTML = '';
-        for (let i = 0; i < movies.length; i++) {
+        for (let i = 0; i < movies.length; i += 1) {
           let contentElement = document.createElement('li');
           contentElement.className = 'content__element';
           if (movies[i].Poster === 'N/A') {
