@@ -7,6 +7,6 @@ This is a project that uses JavaScript to receiving the information from OMDb us
 # Installing
 Navigate to the local directory where the repo was installed
 
-Run npm install
+Run <code>npm install</code>
 
-Run npm start
+Run <code>npm start</code>
