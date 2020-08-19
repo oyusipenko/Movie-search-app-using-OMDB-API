@@ -7,4 +7,5 @@ This is a project that uses JavaScript to receiving the information from OMDb us
 # Installing
 
 Run <code>npm i</code>
+
 Run <code>npm satrt</code>
